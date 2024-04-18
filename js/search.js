@@ -17,7 +17,7 @@ $(document).ready(() => {
       type: 'GET'
     })
       .done((data) => {
-        callback(data); // Chamando a função de retorno de chamada com os dados recebidos
+        callback(data);
       })
   }
 
@@ -53,11 +53,9 @@ $(document).ready(() => {
           index++;
         }
   
-        tableBody.html(items.join('')); // Usando join sem nenhum delimitador para concatenar os elementos do array em uma string
-  
+        tableBody.html(items.join('')); 
         console.log(results);
-        
-        // Navegar até a tabela de resultados
+
         const tableElement = document.getElementById('table-body');
         if (tableElement) {
           tableElement.scrollIntoView({ behavior: 'smooth' });

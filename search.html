@@ -35,58 +35,63 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#l">Search</a>
+              <a class="nav-link" href="#">Search</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <main>
-      <div class="search-content-wrapper">
-        <h1>
-          <strong style="color: darkgreen">Find Universities</strong>
-          Using its name, country or both!
-        </h1>
-        <div class="input-group w-25">
-          <input
+      <div>
+
+        <div class="search-content-wrapper">
+          <h1>
+            <strong style="color: darkgreen">Find Universities</strong>
+            Using its name, country or both!
+          </h1>
+          <div class="input-group w-25">
+            <input
+            id="university-name"
             type="text"
             class="form-control"
             placeholder="University Name"
             aria-label="University Name"
             aria-describedby="button-addon2"
-          />
-        </div>
-        <div class="input-group mb-3 w-25">
-          <input
+            />
+          </div>
+          <div class="input-group mb-3 w-25">
+            <input
+            id="country-name"
             type="text"
             class="form-control"
             placeholder="Country Name"
             aria-label="Country Name"
             aria-describedby="button-addon2"
-          />
-        </div>
-        <button
+            />
+          </div>
+          <button
           class="btn btn-outline-secondary"
           type="button"
           id="search-universities"
-        >
+          >
           Search
         </button>
       </div>
       <div class="search-results-wrapper">
         <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-    <tbody id="table-body">
+          <thead>
+            <tr>
+              <th scope="col">University Name</th>
+              <th scope="col">Country</th>
+              <th scope="col">Site</th>
+            </tr>
+          </thead>
+        <tbody id="table-body">
+        
+        </tbody>
+        </div>
+    </div>
       
-    </tbody>
-      </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 

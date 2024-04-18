@@ -8,6 +8,7 @@
   background-color: #f5f5f5;
 
   background-image: url('https://picsum.photos/seed/picsum/1440/720');
+  background-size: cover;
   padding: 1rem;
 
 }

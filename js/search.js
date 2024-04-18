@@ -12,7 +12,7 @@ function searchUniversities(country, university){
     url += `?name=${university}`
   }
 
-  console.log(url);
+  console.log('URL'. url);
   
     $.ajax({
         url: url,
@@ -44,15 +44,19 @@ $('#search-universities').click(() => {
     const results = searchUniversities(country, university)
 
     console.log(results);
-    alert('No registries were found');
+    if(results.length<=0){
+      alert('No registries were found');
+      return;
+    }else {
+          let items = [];
+      
+           results.map((universityResult) => {
+              const row = createRow(universityResult)
+              items.append(row)
+          } )
+      
+          tableBody.html(items);
 
-    let items = [];
-
-     results.map((universityResult) => {
-        const row = createRow(universityResult)
-        items.append(row)
-    } )
-
-    tableBody.html(items);
+    }
     
 })
